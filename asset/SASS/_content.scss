@@ -1,0 +1,782 @@
+@import 'variable';
+
+/* == index ==*/
+/* ======= content =======*/
+
+@font-face {
+  font-family: 'IranSans';
+  src: url('.../fonts/IRANSans.woff2') format("woff2");
+}
+
+body {
+  font-family: "IranSans" !important;
+}
+
+
+.text-color-1 {
+  color: #060266;
+}
+
+.text{
+  
+  &__h1{
+    color:$color-h;
+    font-size:1.8rem;
+    margin-bottom:16px;
+    color: #060266;
+
+    @media screen and (max-width:768px){
+      font-size:1.6rem;
+    }
+    
+  }
+  &__p{
+    color:$color-p;
+  }
+}
+
+.box{
+  border-radius: 6px;
+  box-shadow: 0px 1px 5px #ccc;
+  min-height:420px !important;
+  background-color:$white;
+  margin-bottom:30px;
+  
+  @media screen and (max-width:768px){
+    margin-bottom:26px;
+  }
+  
+  
+}
+
+.tableHeader{
+    
+    
+  
+  
+  
+  &__text{
+    align-self:center;
+    font-size: 1.2rem;
+    
+    i{
+      font-size:2rem !important;
+      text-align: center;
+      align-self: center;
+      
+      
+      @media screen and (max-width:768px){
+        font-size:1.8rem !important;
+      }
+    }
+    
+    
+  }
+
+  &__search{
+    @media screen and (max-width:768px){
+      margin-top:15px;
+      margin-bottom:10px;
+    }
+  }
+  
+  
+}
+
+.table{
+  border:none;
+  min-width:650px !important;
+}
+.breadcrumb-item {
+  font-size: .85rem !important; 
+}
+.breadcrumb-item + .breadcrumb-item {
+  margin-left: 0;
+  margin-right: .5rem;
+  
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    padding-left: .5rem;
+    padding-right: 0;
+}
+
+
+
+.form-control {
+  height: calc(1.5em + 1.5rem + 5px) !important;
+  border: 1px solid #ccc;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 6px;
+  &:focus {
+    color: #000;
+    border: 1px solid #0cda7642 !important;
+    box-shadow: none !important;
+  }
+
+  &:hover {
+    border-color: #0cda7642;
+  }
+
+  &.input--radius {
+    border-radius: 50px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+
+.btn {
+  padding: .7rem 1.5rem;
+  border-radius: 6px;
+  &:focus,&:active {
+    box-shadow: none !important;
+  }
+}
+
+/*===  Table =====*/
+
+.tableContent{
+  background-color: $color-table-item;
+  text-align: center;
+  
+  &__tr{
+
+    
+
+    th{
+      border:none !important;
+      padding-top: 1.4rem !important;
+      padding-bottom: 1.4rem !important;
+      white-space: nowrap;
+      &:first-child{
+        padding-right: 2rem !important;
+        
+      }
+      
+      @media screen and (max-width:768px){
+        &:first-child{
+          padding-right:1rem !important;
+          
+        }
+        // padding:1rem 0 !important;
+      }
+      
+      
+      
+      &:last-child{
+        padding-left: 1.5rem !important;
+      }
+      
+      
+      
+      
+    }
+  }
+}
+
+
+.tableBody{
+  text-align: center;
+  &:last-child{
+      border-bottom:1px solid rgba(175, 175, 175, 0.445) !important;
+  }
+  td{
+    vertical-align: middle;
+    &:first-child{
+      padding-right: 2rem !important;;
+      
+    }
+    &:last-child{
+      padding-left: 2rem !important;;
+    }
+
+    @media screen and (max-width:768px){
+      &:first-child{
+        padding-right:1rem !important;
+        
+      }
+      // padding:1rem 0 !important;
+    }
+    
+  }
+  
+  
+  /*  === tooggle Buttons*/
+  
+  
+  .cm-toggle {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+   
+  }
+  
+  
+  /* To create surface of toggle button */
+  
+  .cm-toggle:after {
+    content: '';
+    width: 44px;
+    height: 18px;
+    display: inline-block;
+    background: #16a085;
+    border-radius: 18px;
+    clear: both;
+  }
+  
+  
+  /* Contents before checkbox to create toggle handle */
+  
+  .cm-toggle:before {
+    content: '';
+    width: 22px;
+    height: 22px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  
+  /* Shift the handle to left on check event */
+  
+  .cm-toggle:checked:before {
+    left: 22px;
+    box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .cm-toggle:checked:after {
+    background: #16a085;
+  }
+  
+  
+  /* Transition for smoothness */
+  
+  .cm-toggle,
+  .cm-toggle:before,
+  .cm-toggle:after,
+  .cm-toggle:checked:before,
+  .cm-toggle:checked:after {
+    transition: ease .3s;
+    -webkit-transition: ease .3s;
+    -moz-transition: ease .3s;
+    -o-transition: ease .3s;
+  }
+  
+  
+  /* Custom Color */
+  
+  .red:checked:after {
+    background: #a01616;
+  }
+  
+  
+  
+}
+
+
+@media screen and (max-width:768px){
+
+
+  .cm-toggle {
+    
+    margin: 5px;
+  }
+
+  .cm-toggle:after {
+    width: 45px;
+    height: 19px;
+    
+  }
+  
+  
+  /* Contents before checkbox to create toggle handle */
+  
+  .cm-toggle:before {
+    content: '';
+    width: 23px;
+    height: 23px;   
+  }
+  
+  
+  /* Shift the handle to left on check event */
+  
+  .cm-toggle:checked:before {
+    left: 23px;
+  }
+  
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*========= index2 Style =======*/
+
+.index2 .table{
+  min-width:600px !important;
+}
+
+
+
+
+
+
+
+
+/*========= index3 Style =======*/
+
+.index3 .table{
+  min-width:300px !important;
+}
+
+
+/*========= index7 Style =======*/
+
+.index7 .table{
+  min-width:1400px !important;
+}
+
+
+.twoRow{
+  width:250px;
+   text-align: center; 
+  //  padding-top:32px !important;
+}
+
+@media screen and (max-width:768px){
+  .twoRow{
+    width:120px;
+    padding-top:30px !important;
+  }
+}
+
+
+
+
+
+
+.Login8{
+  .index2 .table{
+    min-width:760px !important;
+  }
+}
+
+
+
+
+
+
+/*========= Login4 CSS style =======*/
+
+.chart{
+    border-radius:12px;
+    box-shadow: 0px 1px 5px #ccc;
+    padding: 80px 40px;
+    background-color:$white;
+   display: flex;
+   flex-direction: column;
+ 
+    
+    &__icon{
+    align-self: center;
+    // border:1px solid rgba(175, 175, 175, 0.445);
+    box-shadow: 0px 1px 10px rgba(0,0,0,.2);
+      height:150px;
+      width:150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      i{
+        font-size:60px;
+        color:rgb(216, 22, 22);
+      }
+
+    }
+    
+    &__body{
+      margin-top:30px;
+      
+    }
+  
+}
+
+
+
+
+
+
+//===== table input
+
+.input-table{
+
+  border:none !important;
+  
+  input{
+    border:none !important;
+    box-shadow: none !important;
+
+   
+  }
+
+  input:hover{
+    border:none !important;
+  box-shadow: none !important;
+  }
+
+  input:focus{
+    border:none !important;
+  box-shadow: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mainPage .cards{
+  position: relative;
+  cursor: pointer;
+}
+.mainPage a{
+  text-decoration: none;
+}
+
+.mainPage .cards .face{
+
+  height: 200px;
+  transition: 0.5s;
+}
+
+.mainPage .cards .face.face1{
+  position: relative;
+  background: #2F3E46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.mainPage .cards:hover .face.face1{
+  background: #0cb1da;
+  transform: translateY(0);
+}
+
+.mainPage .cards:hover .face.face1 .content h3{
+  color: #fff !important ;
+}
+
+
+
+
+
+.mainPage .cards .face.face1 .content{
+  opacity: 0.2;
+  transition: 0.5s;
+}
+
+.mainPage .cards:hover .face.face1 .content{
+  opacity: 1;
+}
+
+.mainPage .cards .face.face1 .content img{
+  max-width: 100px;
+}
+
+.mainPage .cards .face.face1 .content h3{
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff !important;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.mainPage .cards .face.face2{
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 30px rgba(44, 197, 146, 0.8);
+  transform: translateY(-100px);
+}
+
+.mainPage .cards:hover .face.face2{
+  transform: translateY(0);
+}
+
+.mainPage .cards .face.face2  p{
+  color:#08063b;
+  font-size:1.2rem;
+  
+}
+
+.mainPage .cards .face.face2 .content a{
+  margin: 15px 0 0;
+  display:  inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+.mainPager .cards .face.face2 .content a:hover{
+  background: #333;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+//====== backup and restore Style
+
+
+
+.items {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 10px;
+  cursor: pointer;
+  min-height:220px;
+  transition: all 0.6s;
+  background-color: #2F3E46;
+}
+
+
+.icon-wrapper, .project-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper i {
+  font-size: 100px;
+  color: $color-p;
+  transform: translateY(0px);
+  transition: all 0.6s;
+}
+
+.icon-wrapper {
+  align-self: end;  
+}
+
+.project-name {
+  align-self: start;
+}
+.project-name p {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color:$color-p;  
+  transform: translateY(0px);
+  transition: all 0.5s;
+}
+
+.items:hover {
+  background-color: #00B4D8;
+  color:$white;
+  
+  & .project-name p {
+    transform: translateY(-8px);
+    color:$white;
+  }
+  & .icon-wrapper i {
+    transform: translateY(4px);
+    color:$white;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==== backup Style
+
+.list-box{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  
+  
+  
+  &:first-child{
+      background-color: $primary-light !important;
+      color:$white;
+  }
+  
+  &__text{
+      align-self: center;
+      flex-basis: 160px;
+      
+      
+      h3{
+          font-size:1.6rem;
+      }
+      
+      @media screen and (max-width:600px){
+          h3{
+              font-size:1.3rem;
+          }
+      }
+  }
+  
+  &__btn{
+      padding:8px 25px;
+      background-color: $primary;
+      color:$white;
+      transition: 0.3s;
+  }
+}
+
+
+
+
+
+//==== restore Style
+
+
+
+.list-box{
+  
+  flex-direction: row;
+
+  &__text2{
+      align-self: center;
+      flex-basis:280px;
+
+      h3{
+          font-size:1.5rem !important;
+      }
+  
+      
+  
+      @media screen and (max-width:665px){
+
+          flex-basis:400px !important;
+
+          p{
+              font-size:0.8rem;
+          }
+
+          h3{
+              font-size:1rem !important;
+          }
+      } 
+      
+      @media screen and (max-width:575px){
+
+
+          h3{
+              font-size:1rem !important;
+          }
+          button{
+            font-size:0.9rem;
+          }
+
+      } 
+      @media screen and (max-width:400px){
+
+
+          h3{
+              font-size:1rem !important;
+          }
+      
+          a{
+              font-size: 0.6rem !important;
+          }
+
+          p{
+              font-size:0.6rem !important;
+          }
+      } 
+
+  
+      
+      
+      
+      
+  }
+  
+  &__btn1{
+      padding:8px 18px;
+      background-color: $primary;
+      color:$white;
+      transition: 0.3s;
+      font-size:1rem !important;
+
+      @media screen and (max-width:675px){
+          padding:6px 8px !important;
+          font-size:0.8rem !important;
+      }
+      @media screen and (max-width:500px){
+          font-size:0.6rem !important;
+      }
+      @media screen and (max-width:420px){
+          padding:4px 3px !important;
+          font-size:0.4rem !important;
+      }
+  }
+  
+  &__btn2{
+      padding:8px 14px !important;
+      transition: 0.3s;
+      font-size:1rem !important;
+
+      @media screen and (max-width:675px){
+          padding:6px 6px !important;
+          font-size:0.8rem !important;
+      }
+      @media screen and (max-width:500px){
+          font-size:0.6rem !important;
+      }
+      @media screen and (max-width:420px){
+          padding:4px 2px !important;
+          font-size:0.4rem !important;
+      }
+  }
+}

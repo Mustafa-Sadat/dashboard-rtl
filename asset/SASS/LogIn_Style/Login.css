@@ -1,0 +1,216 @@
+/*== SideNav Color ===*/
+/* === Conent Color ====*/
+/* === LogIn Page Color ====*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  direction: rtl;
+  text-align: right;
+}
+
+.login .btn {
+  padding: .7rem 1.5rem;
+  border-radius: 6px;
+}
+
+.login .btn:focus, .login .btn:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.login .btn-primary {
+  background-color: #54D0FF !important;
+  border: none;
+}
+
+.login .main {
+  height: 100vh;
+}
+
+.login .box__style {
+  width: 100%;
+}
+
+.login .text {
+  padding: 20px 0;
+}
+
+.login .text__h3 {
+  color: #060266;
+  font-size: 2rem;
+}
+
+.login .text__p {
+  color: #989696;
+  font-size: 1rem;
+}
+
+.login .forms {
+  padding: 10px 0;
+}
+
+.login .forms .form-group input {
+  border-radius: 10px;
+  height: 42px;
+  font-size: .9rem;
+  color: #989696;
+}
+
+.login .forms .form-group input::-webkit-input-placeholder {
+  color: #989696;
+}
+
+.login .forms .form-group input:-ms-input-placeholder {
+  color: #989696;
+}
+
+.login .forms .form-group input::-ms-input-placeholder {
+  color: #989696;
+}
+
+.login .forms .form-group input::placeholder {
+  color: #989696;
+}
+
+.login .forms .form-group p {
+  font-size: .8rem;
+  color: #0A7036;
+  margin: 10px 0;
+}
+
+.login .btn-style {
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 10px 0;
+  height: auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.login .image {
+  padding: 30px 10px;
+}
+
+.login .image__style {
+  width: 100%;
+  height: 360px;
+}
+
+.login .a-style {
+  text-decoration: none;
+  color: #0A7036;
+  margin-top: 3rem !important;
+  display: inline-block;
+}
+
+.login .a-style:hover {
+  color: #060266;
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+  .login .box {
+    padding: 6rem 0 2rem;
+  }
+  .login .a-style {
+    margin-top: 2.7rem !important;
+  }
+}
+
+@media screen and (min-width: 929px) and (max-width: 992px) {
+  .login .forms {
+    max-width: 400px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 929px) {
+  .login .forms {
+    max-width: 350px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .login .forms {
+    max-width: 320px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 868px) {
+  .login .forms {
+    max-width: 290px !important;
+  }
+  .login .img-style {
+    max-width: 390px !important;
+    margin-top: 60px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  .login .box {
+    padding: 3rem 0 2rem;
+  }
+  .login .forms {
+    padding: 10px 0;
+  }
+  .login .forms .form-group input {
+    height: 38px;
+  }
+  .login .image {
+    padding: 20px 10px;
+  }
+  .login .a-style {
+    margin-top: 2rem !important;
+  }
+}
+
+.login .form-control {
+  height: calc(1.8em + 0.75rem + 5px) !important;
+  border: 1px solid #ccc;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  margin-bottom: 1.5rem;
+}
+
+.login .form-control:focus {
+  color: #000 !important;
+  border: 2px solid #54D0FF;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.login .form-control:hover {
+  border-color: #54D0FF;
+}
+
+.login .form-control.input--radius {
+  border-radius: 50px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.login .hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*# sourceMappingURL=Login.css.map */
