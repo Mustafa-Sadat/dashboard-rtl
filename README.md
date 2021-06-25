@@ -1,0 +1,2 @@
+# dashboard-rtl
+Farsi dashboard
